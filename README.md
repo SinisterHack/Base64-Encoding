@@ -1,31 +1,4 @@
 # Base64-Encoding
-### Java Code:
-
-```java
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Base64;
-
-public class EncodePasswords {
-    public static void main(String[] args) {
-        try (BufferedReader file1 = new BufferedReader(new FileReader("pwd.lst"));
-             BufferedWriter file2 = new BufferedWriter(new FileWriter("b64pwds.lst"))) {
-            String line;
-            while ((line = file1.readLine()) != null) {
-                String clear = "administrator:" + line.strip();
-                String encoded = Base64.getEncoder().encodeToString(clear.getBytes());
-                file2.write(encoded + "\n");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-}
-```
-
 ### Aim of the Code:
 
 The aim of this code is to **read a list of passwords from a file, encode each password using Base64 encoding, and write the encoded passwords to a new file**. This helps in obfuscating the passwords for secure storage or transmission.
