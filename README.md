@@ -91,7 +91,4 @@ java EncodePasswords pwd.lst b64pwds.lst
 
 ## License
 
-This project is licensed under the MIT License.
-```
-
-This README file now exactly matches the Java code provided previously. Feel free to adjust any details to better suit your project's specifics.
+This project is licensed under the [MIT License](./LICENSE.txt).
